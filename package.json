@@ -19,19 +19,19 @@
     "url": "https://github.com/NM-TAFE/dip-web-app-my-react-app-manual/issues"
   },
   "homepage": "https://nm-tafe.github.io/dip-web-app-my-react-app-manual/",
-  "description": "",
+  "description": "Using Create React App is typically recommended for beginners because it handles much of the setup and configuration automatically. To understand the building block of the React, Next JS ecosystem we will work with stripped down manual installations",
   "dependencies": {
     "gh-pages": "^6.3.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.0",
-    "@babel/preset-env": "^7.28.0",
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "babel-loader": "^10.0.0",
-    "html-webpack-plugin": "^5.6.3",
-    "webpack": "^5.100.2",
+    "html-webpack-plugin": "^5.6.4",
+    "webpack": "^5.102.0",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
   }
