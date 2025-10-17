@@ -71,10 +71,12 @@ const PropertyCard = ({ property }) => (
       {/* Property image */}
       <img src={property.img} alt={property.title} />
     </div>
+    {/* Price section */}
     <div className="price">
       <span>${property.price}</span>
       <p>per night</p>
     </div>
+    {/* Amenities section */}
     <ul className="amenities">
       <li><i className="icon-bedrooms"></i> {property.bedrooms}</li>
       <li><i className="icon-bathrooms"></i> {property.bathrooms}</li>
@@ -82,6 +84,8 @@ const PropertyCard = ({ property }) => (
   </div>
 );
 
+// Main component for featured properties
+// Maps over the properties array and renders a property card for each property
 const FeaturedProperties = () => (
   <div className="main col-sm-8">
     <h1 className="section-title">Featured Properties</h1>
