@@ -78,7 +78,7 @@ const Header = ({ setPage }) => {
 
                 <ul className="nav navbar-nav">
                   <li>
-                    <a href="index.html" onClick={(e) => e.preventDefault() && setPage("home")}>
+                    <a href="#" onClick={(e) => { e.preventDefault(); setPage("home"); }}>
                       Find a Rental
                     </a>
                   </li>
@@ -93,17 +93,17 @@ const Header = ({ setPage }) => {
                     </a>
                   </li>
                   <li>
-                    <a href="regions.html" onClick={(e) => e.preventDefault() && setPage("regions")}>
+                    <a href="#" onClick={(e) => { e.preventDefault(); setPage("regions"); }}>
                       Regions
                     </a>
                   </li>
                   <li>
-                    <a href="news.html" onClick={(e) => e.preventDefault() && setPage("news")}>
+                    <a href="#" onClick={(e) => { e.preventDefault(); setPage("news"); }}>
                       News
                     </a>
                   </li>
                   <li>
-                    <a href="contact.html" onClick={(e) => e.preventDefault() && setPage("contact")}>
+                    <a href="#" onClick={(e) => { e.preventDefault(); setPage("contact"); }}>
                       Contact
                     </a>
                   </li>
