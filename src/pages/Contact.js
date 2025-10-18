@@ -27,75 +27,81 @@ const Contact = () => {
   };
 
   return (
-    <div className="main col-sm-12">
-      <h1 className="section-title">Contact Us</h1>
+    <div className="content">
+      <div className="container">
+        <div className="row">
+          <div className="main col-sm-12">
+            <h1 className="section-title">Contact Us</h1>
 
-      {/* Show confirmation message */}
-      {submitted ? (
-        <div className="alert alert-success">
-          <strong>Thank you!</strong> Your message has been sent.
+            {/* Show confirmation message */}
+            {submitted ? (
+                <div className="alert alert-success">
+                <strong>Thank you!</strong> Your message has been sent.
+                </div>
+            ) : (
+                // Contact Form, value is linked to state and onChange updates the state dynamically
+                <form className="contact-form" onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        {/* Name */}
+                        <label htmlFor="name">Name:</label>
+                        <input
+                        type="text"
+                        className="form-control"
+                        id="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        {/* Email */}
+                        <label htmlFor="email">Email:</label>
+                        <input
+                        type="email"
+                        className="form-control"
+                        id="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        {/* Subject */}
+                        <label htmlFor="subject">Subject:</label>
+                        <input
+                        type="text"
+                        className="form-control"
+                        id="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        required
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        {/* Message */}
+                        <label htmlFor="message">Message:</label>
+                        <textarea
+                        className="form-control"
+                        id="message"
+                        rows="5"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        ></textarea>
+                    </div>
+
+                    {/* Submit */}
+                    <button type="submit" className="btn btn-primary">
+                        Send Message
+                    </button>
+                </form>
+            )}
+          </div>
         </div>
-      ) : (
-        // Contact Form, value is linked to state and onChange updates the state dynamically
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <div className="form-group">
-            {/* Name */}
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              className="form-control"
-              id="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            {/* Email */}
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              className="form-control"
-              id="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            {/* Subject */}
-            <label htmlFor="subject">Subject:</label>
-            <input
-              type="text"
-              className="form-control"
-              id="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            {/* Message */}
-            <label htmlFor="message">Message:</label>
-            <textarea
-              className="form-control"
-              id="message"
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-
-          {/* Submit */}
-          <button type="submit" className="btn btn-primary">
-            Send Message
-          </button>
-        </form>
-      )}
+      </div>
     </div>
   );
 };
