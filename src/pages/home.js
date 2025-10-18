@@ -107,15 +107,18 @@ const Home = () => {
                     </div>
                   </div>
 
-                  {/* Stay */}
+                  {/* Stay - I changed the design up because for some reason the functionality was not working with the static html code */}
                   <div className="form-control-small">
                     <select
                       id="search_status"
                       name="search_status"
-                      data-placeholder="Stay..."
+                      className="form-control"
+                      defaultValue=""
                     >
-                      <option value=""></option>
-                      {Array.from({ length: 14 }, (_, i) => (
+                      <option value="" disabled>
+                        Stay...
+                      </option>
+                      {Array.from({ length: 15 }, (_, i) => (
                         <option key={i + 1} value={i + 1}>
                           {i + 1} Night{i + 1 > 1 ? "s" : ""}
                         </option>
@@ -123,22 +126,28 @@ const Home = () => {
                     </select>
                   </div>
 
-                  {/* Bedroom */}
+                  {/* Bedroom - Similar to the stay section, functionality wasn't working so I had to find other alternatives */}
                   <div className="form-control-small">
                     <select
                       id="search_bedrooms"
                       name="search_bedrooms"
-                      data-placeholder="Bedrooms"
+                      className="form-control"
+                      defaultValue=""
                     >
-                      <option value=""></option>
-                      {[0, 1, 2, 3, 4, 5].map((n) => (
-                        <option key={n} value={n}>
-                          {n === 5 ? "5+" : n}
-                        </option>
-                      ))}
+                      <option value="" disabled>
+                        Bedrooms
+                      </option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="5+">5+</option>
                     </select>
                   </div>
 
+                  {/* Location*/}
                   <div className="form-control-large">
                     <input
                       type="text"
