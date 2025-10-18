@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import Home from "./pages/home";
 import Contact from "./pages/Contact";
+import LatestNews from "./pages/LatestNews";
 
 const App = () => {
   const [page, setPage] = useState("home"); // "home" or "contact" for now
@@ -14,6 +15,7 @@ const App = () => {
       {/* Conditional rendering of pages based on `page` state */}
       {page === "home" && <Home />}
       {page === "contact" && <Contact />}
+      {page === "news" && <LatestNews />} {/* add LatestNews page */}
       <Footer />
     </div>
   );

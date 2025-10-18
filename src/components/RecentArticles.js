@@ -1,13 +1,14 @@
 // src/components/RecentArticles.js
 import React from "react";
 
-// Array of recent articles, can be easily updated
+// Array of recent articles, can be easily updated by copy and pasting and filling in the information
 const articles = [
   {
     title: "How to get your dream property for the best price?",
     date: "July 30, 2014",
     comments: 2,
     tags: "Properties, Prices, best deals",
+    // img: "http://placehold.it/766x515",
     link: "#",
     icon: "fa-file-text",
     description:
@@ -18,6 +19,7 @@ const articles = [
     date: "July 24, 2014",
     comments: 4,
     tags: "Tips, Mortgage",
+    // img: "http://placehold.it/766x515",
     link: "#",
     icon: "fa-film",
     description:
@@ -28,6 +30,7 @@ const articles = [
     date: "July 05, 2014",
     comments: 1,
     tags: "Location, Price, House",
+    // img: "http://placehold.it/766x515",
     link: "#",
     icon: "fa-file-text",
     description:
@@ -35,20 +38,21 @@ const articles = [
   },
 ];
 
-// Component for a single article card
+// Component for displaying a single article card
 const ArticleCard = ({ article }) => (
   <div className="item col-md-4">
     <div className="image">
-      {/* "Read More" button */}
+      {/* "Read More" button linking to full article */}
       <a href={article.link}>
         <span className="btn btn-default">
           <i className={`fa ${article.icon}`}></i> Read More
         </span>
       </a>
-      {/* Image removed */}
+      {/* Article image
+      <img src={article.img} alt={article.title} /> */}
     </div>
 
-    {/* Tag icon */}
+    {/* Small icon tag for article type */}
     <div className="tag">
       <i className={`fa ${article.icon}`}></i>
     </div>
@@ -72,13 +76,14 @@ const ArticleCard = ({ article }) => (
         <a href={article.link}>{article.title}</a>
       </h3>
 
-      {/* Short description */}
+      {/* Short description of the article */}
       <p>{article.description}</p>
     </div>
   </div>
 );
 
-// Main RecentArticles component
+// Main recent articles component
+// Maps over the articles array and renders an article card for each article
 const RecentArticles = () => (
   <div>
     <h1 className="section-title">Recent Articles</h1>
