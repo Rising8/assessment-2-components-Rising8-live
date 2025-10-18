@@ -1,22 +1,29 @@
 import React from "react";
 
+// // Displays array of popular regions, can be easily updated
+// const regions = [
+//   { name: "Rhovanion", img: "http://placehold.it/194x194", link: "#" },
+//   { name: "Eriador", img: "http://placehold.it/194x194", link: "#" },
+//   { name: "Bay of Belfalas", img: "http://placehold.it/194x194", link: "#" },
+//   { name: "Mordor", img: "http://placehold.it/194x194", link: "#" },
+//   { name: "The Southwest", img: "http://placehold.it/194x194", link: "#" },
+//   { name: "Arnor", img: "http://placehold.it/194x194", link: "#" },
+// ];
+
 // Displays array of popular regions, can be easily updated
 const regions = [
-  { name: "Rhovanion", img: "http://placehold.it/194x194", link: "#" },
-  { name: "Eriador", img: "http://placehold.it/194x194", link: "#" },
-  { name: "Bay of Belfalas", img: "http://placehold.it/194x194", link: "#" },
-  { name: "Mordor", img: "http://placehold.it/194x194", link: "#" },
-  { name: "The Southwest", img: "http://placehold.it/194x194", link: "#" },
-  { name: "Arnor", img: "http://placehold.it/194x194", link: "#" },
+  { name: "Rhovanion", link: "#" },
+  { name: "Eriador", link: "#" },
+  { name: "Bay of Belfalas", link: "#" },
+  { name: "Mordor", link: "#" },
+  { name: "The Southwest", link: "#" },
+  { name: "Arnor", link: "#" },
 ];
 
 // Component for a single region card
 const RegionCard = ({ region }) => (
   <div className="item">
     <a href={region.link}>
-      {/* Region image */}
-      <img src={region.img} alt={region.name} />
-      {/* Region name */}
       <h3>{region.name}</h3>
     </a>
   </div>
