@@ -4,6 +4,7 @@ import Footer from "./components/footer";
 import Home from "./pages/home";
 import Contact from "./pages/Contact";
 import LatestNews from "./pages/LatestNews";
+import Regions from "./pages/Regions";
 
 const App = () => {
   const [page, setPage] = useState("home"); // "home" or "contact" for now
@@ -16,6 +17,7 @@ const App = () => {
       {page === "home" && <Home />}
       {page === "contact" && <Contact />}
       {page === "news" && <LatestNews />} {/* add LatestNews page */}
+      {page === "regions" && <Regions />} {/* add Regions page */}
       <Footer />
     </div>
   );
