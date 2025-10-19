@@ -3,6 +3,7 @@ import FeaturedProperties from "../components/FeaturedProperties";
 import PopularRegions from "../components/PopularRegions";
 import RecentArticles from "../components/RecentArticles";
 import Sidebar from "../components/Sidebar";
+import DatePicker from "../components/DatePicker";
 
 const Home = () => {
   return (
@@ -88,23 +89,10 @@ const Home = () => {
           <div className="row">
             <div className="col-sm-12">
               <form>
-                {/* Arrive On */}
                 <div className="form-group">
+                  {/* Arrive On */}
                   <div className="form-control-small">
-                    <div
-                      className="input-group date chzn-container"
-                      data-datepicker
-                    >
-                      <input
-                        placeholder="Arrive on..."
-                        type="text"
-                        className="form-control"
-                        data-date-format="DD/MM/YYYY"
-                      />
-                      <span className="input-group-addon">
-                        <span className="glyphicon glyphicon-calendar"></span>
-                      </span>
-                    </div>
+                    <DatePicker placeholder="Arrive on..." />
                   </div>
 
                   {/* Stay - I changed the design up because for some reason the functionality was not working with the static html code */}
