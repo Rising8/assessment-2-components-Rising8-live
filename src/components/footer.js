@@ -32,66 +32,25 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Popular Regions
-          <div className="block col-sm-6">
-            <h3>Popular regions</h3>
-            <div className="row">
-              <div className="col-sm-6">
-                <ul className="footer-listings">
-                  {[
-                    { name: "Rhovanion", img: "http://placehold.it/760x670" },
-                    { name: "Eriador", img: "http://placehold.it/760x670" },
-                    { name: "Bay of Belfalas", img: "http://placehold.it/760x670" },
-                  ].map((region, i) => (
-                    <li key={i}>
-                      <div className="image">
-                        <a href="properties-detail.html">
-                          <img src={region.img} alt={region.name} />
-                        </a>
-                      </div>
-                      <p>
-                        <a href="properties-detail.html">{region.name}</a>
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="col-sm-6">
-                <ul className="footer-listings">
-                  {[
-                    { name: "Mordor", img: "http://placehold.it/760x670" },
-                    { name: "Arnor", img: "http://placehold.it/760x670" },
-                    { name: "Forlindon", img: "http://placehold.it/760x670" },
-                  ].map((region, i) => (
-                    <li key={i}>
-                      <div className="image">
-                        <a href="properties-detail.html">
-                          <img src={region.img} alt={region.name} />
-                        </a>
-                      </div>
-                      <p>
-                        <a href="properties-detail.html">{region.name}</a>
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
           {/* Popular Regions */}
           <div className="block col-sm-6">
             <h3>Popular regions</h3>
             <div className="row">
               <div className="col-sm-6">
                 <ul className="footer-listings">
-                  {["Rhovanion", "Eriador", "Bay of Belfalas"].map((region, i) => (
+                  {[
+                    { name: "Rhovanion", img: "/images/patterns/pattern1.jpg" },
+                    { name: "Eriador", img: "/images/patterns/pattern2.jpg" },
+                    { name: "Bay of Belfalas", img: "/images/patterns/pattern3.jpg" },
+                  ].map((region, i) => (
                     <li key={i}>
-                      {/* Images removed because we don't have images and if we keep the images the design looks different */}
+                      <div className="image">
+                        <a href="properties-detail.html">
+                          <img src={region.img} alt={region.name} style={{ width: "100%", }} />
+                        </a>
+                      </div>
                       <p>
-                        <a href="properties-detail.html">{region}</a>
+                        <a href="properties-detail.html">{region.name}</a>
                       </p>
                     </li>
                   ))}
@@ -99,11 +58,19 @@ const Footer = () => {
               </div>
               <div className="col-sm-6">
                 <ul className="footer-listings">
-                  {["Mordor", "Arnor", "Forlindon"].map((region, i) => (
+                  {[
+                    { name: "Mordor", img: "/images/patterns/pattern4.jpg" },
+                    { name: "Arnor", img: "/images/patterns/pattern5.jpg" },
+                    { name: "Forlindon", img: "/images/patterns/pattern6.jpg" },
+                  ].map((region, i) => (
                     <li key={i}>
-                      {/* Images removed because we don't have images */}
+                      <div className="image">
+                        <a href="properties-detail.html">
+                          <img src={region.img} alt={region.name} style={{ width: "100%",  }} />
+                        </a>
+                      </div>
                       <p>
-                        <a href="properties-detail.html">{region}</a>
+                        <a href="properties-detail.html">{region.name}</a>
                       </p>
                     </li>
                   ))}
@@ -113,6 +80,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+          
 
       {/* Copyright */}
       <div id="copyright">

@@ -8,7 +8,7 @@ const articles = [
     date: "July 30, 2014",
     comments: 2,
     tags: "Properties, Prices, best deals",
-    // img: "http://placehold.it/766x515",
+    img: "/images/patterns/pattern1.jpg",
     link: "#",
     icon: "fa-file-text",
     description:
@@ -19,7 +19,7 @@ const articles = [
     date: "July 24, 2014",
     comments: 4,
     tags: "Tips, Mortgage",
-    // img: "http://placehold.it/766x515",
+    img: "/images/patterns/pattern2.jpg",
     link: "#",
     icon: "fa-film",
     description:
@@ -30,7 +30,7 @@ const articles = [
     date: "July 05, 2014",
     comments: 1,
     tags: "Location, Price, House",
-    // img: "http://placehold.it/766x515",
+    img: "/images/patterns/pattern3.jpg",
     link: "#",
     icon: "fa-file-text",
     description:
@@ -48,8 +48,8 @@ const ArticleCard = ({ article }) => (
           <i className={`fa ${article.icon}`}></i> Read More
         </span>
       </a>
-      {/* Article image
-      <img src={article.img} alt={article.title} /> */}
+      {/* Article image */}
+      <img src={article.img} alt={article.title} style={{height: "200px", objectFit: "cover", }}/>
     </div>
 
     {/* Small icon tag for article type */}

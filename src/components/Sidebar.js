@@ -7,28 +7,28 @@ const deals = [
     title: "Private Beach",
     location: "Lossarnach, Eriado",
     availability: "Available Now",
-    img: "http://placehold.it/100x100",
+    img: "/images/patterns/pattern1.jpg",
     link: "blog-detail.html",
   },
   {
     title: "Mountain views",
     location: "Hyarnustar, Rhovanion",
     availability: "Available on 24 July",
-    img: "http://placehold.it/100x100",
+    img: "/images/patterns/pattern2.jpg",
     link: "blog-detail.html",
   },
   {
     title: "Heart of the village",
     location: "Minhiriath, Eriador",
     availability: "Available 5 July",
-    img: "http://placehold.it/100x100",
+    img: "/images/patterns/pattern3.jpg",
     link: "blog-detail.html",
   },
   {
     title: "The city life",
     location: "West Beleriand, Mordor",
     availability: "Available 6 July",
-    img: "http://placehold.it/100x100",
+    img: "/images/patterns/pattern4.jpg",
     link: "blog-detail.html",
   },
 ];
@@ -41,7 +41,7 @@ const activities = [
     target: "The House With No Windows",
     message: "Awesome solitary confinement, mate. Spot on. Sweet as.",
     time: "Just now",
-    img: "http://placehold.it/70x70",
+    img: "/images/patterns/pattern5.jpg",
   },
   {
     user: "Ingo Schoomer",
@@ -49,7 +49,7 @@ const activities = [
     target: "The Mistake by the Lake",
     message: "Has this house been unit tested?",
     time: "37 minutes ago",
-    img: "http://placehold.it/70x70",
+    img: "/images/patterns/pattern6.jpg",
   },
 ];
 

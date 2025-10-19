@@ -7,7 +7,7 @@ const properties = [
   {
     title: "Luxury Apartment with great views",
     location: "Upper East Side, New York",
-    img: "http://placehold.it/760x670",
+    img: "/images/patterns/pattern7.jpg",
     price: 950,
     bedrooms: 4,
     bathrooms: 3,
@@ -16,7 +16,7 @@ const properties = [
   {
     title: "Stunning Villa with 5 bedrooms",
     location: "Miami Beach, Florida",
-    img: "http://placehold.it/760x670",
+    img: "/images/patterns/pattern8.jpg",
     price: 1300,
     bedrooms: 5,
     bathrooms: 2,
@@ -25,7 +25,7 @@ const properties = [
   {
     title: "Recent construction with 3 bedrooms",
     location: "Park Slope, New York",
-    img: "http://placehold.it/760x670",
+    img: "/images/patterns/pattern9.jpg",
     price: 560,
     bedrooms: 3,
     bathrooms: 2,
@@ -34,7 +34,7 @@ const properties = [
   {
     title: "Modern construction with parking space",
     location: "Midtown, New York",
-    img: "http://placehold.it/760x670",
+    img: "/images/patterns/pattern1.jpg",
     price: 85,
     bedrooms: 1,
     bathrooms: 2,
@@ -43,7 +43,7 @@ const properties = [
   {
     title: "Single Family Townhouse",
     location: "Cobble Hill, New York",
-    img: "http://placehold.it/760x670",
+    img: "/images/patterns/pattern2.jpg",
     price: 840,
     bedrooms: 2,
     bathrooms: 2,
@@ -52,7 +52,7 @@ const properties = [
   {
     title: "3 bedroom villa with garage for rent",
     location: "Bal Harbour, Florida",
-    img: "http://placehold.it/760x670",
+    img: "/images/patterns/pattern3.jpg",
     price: 150,
     bedrooms: 3,
     bathrooms: 2,
@@ -69,7 +69,14 @@ const PropertyCard = ({ property }) => (
         <span className="location">{property.location}</span>
       </a>
       {/* Property image */}
-      <img src={property.img} alt={property.title} />
+      <img
+        src={property.img}
+        alt={property.title}
+        style={{
+            height: "140px",
+            objectFit: "cover",
+        }}
+        />
     </div>
     {/* Price section */}
     <div className="price">

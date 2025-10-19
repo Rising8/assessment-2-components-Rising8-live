@@ -1,29 +1,29 @@
 import React from "react";
 
-// // Displays array of popular regions, can be easily updated
-// const regions = [
-//   { name: "Rhovanion", img: "http://placehold.it/194x194", link: "#" },
-//   { name: "Eriador", img: "http://placehold.it/194x194", link: "#" },
-//   { name: "Bay of Belfalas", img: "http://placehold.it/194x194", link: "#" },
-//   { name: "Mordor", img: "http://placehold.it/194x194", link: "#" },
-//   { name: "The Southwest", img: "http://placehold.it/194x194", link: "#" },
-//   { name: "Arnor", img: "http://placehold.it/194x194", link: "#" },
-// ];
-
 // Displays array of popular regions, can be easily updated
 const regions = [
-  { name: "Rhovanion", link: "#" },
-  { name: "Eriador", link: "#" },
-  { name: "Bay of Belfalas", link: "#" },
-  { name: "Mordor", link: "#" },
-  { name: "The Southwest", link: "#" },
-  { name: "Arnor", link: "#" },
+  { name: "Rhovanion", img: "/images/patterns/pattern1.jpg", link: "#" },
+  { name: "Eriador", img: "/images/patterns/pattern2.jpg", link: "#" },
+  { name: "Bay of Belfalas", img: "/images/patterns/pattern3.jpg", link: "#" },
+  { name: "Mordor", img: "/images/patterns/pattern4.jpg", link: "#" },
+  { name: "The Southwest", img: "/images/patterns/pattern5.jpg", link: "#" },
+  { name: "Arnor", img: "/images/patterns/pattern6.jpg", link: "#" },
 ];
 
 // Component for a single region card
 const RegionCard = ({ region }) => (
-  <div className="item">
+  <div className="col-sm-4 text-center" style={{ marginBottom: "30px" }}>
     <a href={region.link}>
+      <img
+        src={region.img}
+        alt={region.name}
+        style={{
+          width: "100%",
+          maxWidth: "194px",
+          height: "194px",
+          objectFit: "cover",
+        }}
+      />
       <h3>{region.name}</h3>
     </a>
   </div>
