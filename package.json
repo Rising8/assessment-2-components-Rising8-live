@@ -21,14 +21,17 @@
   "homepage": "https://nm-tafe.github.io/dip-web-app-my-react-app-manual/",
   "description": "Using Create React App is typically recommended for beginners because it handles much of the setup and configuration automatically. To understand the building block of the React, Next JS ecosystem we will work with stripped down manual installations",
   "dependencies": {
+    "@babel/runtime": "^7.28.4",
     "bootstrap": "^5.3.8",
     "bootstrap-datepicker": "^1.10.1",
+    "bootstrap-select": "^1.13.18",
     "chosen-js": "^1.8.7",
     "gh-pages": "^6.3.0",
     "jquery": "^3.7.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router-dom": "^7.9.4"
+    "react-router-dom": "^7.9.4",
+    "react-select": "^5.10.2"
   },
   "devDependencies": {
     "@babel/core": "^7.28.4",

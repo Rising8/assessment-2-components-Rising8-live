@@ -38,7 +38,7 @@ const NewsCard = ({ news }) => (
           <i className="fa fa-file-o"></i> Read More
         </span>
       </a>
-      {/* <img src="http://placehold.it/766x515" alt={news.title} /> */} {/* remove the image */}
+      <img src="/images/patterns/pattern1.jpg" alt={news.title} /> {/* remove the image */}
     </div>
     <div className="tag">
       <i className={`fa ${news.icon}`}></i>
