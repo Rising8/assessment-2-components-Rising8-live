@@ -1,109 +1,35 @@
-// src/components/Footer.js
 import React from "react";
+import FooterPopularRegions from "./FooterPopularRegions"; // Added separate component for footer popular regions section
 
-const Footer = () => {
-  return (
-    <footer id="footer">
-      {/* Footer Top */}
-      <div id="footer-top" className="container">
-        <div className="row">
-          {/* About / Logo */}
-          <div className="block col-sm-3">
-            <a href="#">
-              <img src="images/logo.png" alt="One Ring Rentals" />
-            </a>
-            <br /><br />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-              commodo eros nibh, et dictum elit tincidunt eget. Pellentesque
-              volutpat quam dignissim, convallis elit id, efficitur sem.
-              Vivamus ac scelerisque sem. Aliquam sed enim rutrum nibh gravida
-              pellentesque nec at metus.
-            </p>
-          </div>
-
-          {/* Helpful Links */}
-          <div className="block col-sm-3">
-            <h3>Helpful Links</h3>
-            <ul className="footer-links">
-              <li><a href="#">All rentals</a></li>
-              <li><a href="#">List your rental</a></li>
-              <li><a href="#">Read our FAQs</a></li>
-            </ul>
-          </div>
-
-          {/* Popular Regions */}
-          <div className="block col-sm-6">
-            <h3>Popular regions</h3>
-            <div className="row">
-              <div className="col-sm-6">
-                <ul className="footer-listings">
-                  {[
-                    { name: "Rhovanion", img: "/images/patterns/pattern1.jpg" },
-                    { name: "Eriador", img: "/images/patterns/pattern2.jpg" },
-                    { name: "Bay of Belfalas", img: "/images/patterns/pattern3.jpg" },
-                  ].map((region, i) => (
-                    <li key={i}>
-                      <div className="image">
-                        <a href="properties-detail.html">
-                          <img src={region.img} alt={region.name} style={{ width: "100%", }} />
-                        </a>
-                      </div>
-                      <p>
-                        <a href="properties-detail.html">{region.name}</a>
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="col-sm-6">
-                <ul className="footer-listings">
-                  {[
-                    { name: "Mordor", img: "/images/patterns/pattern4.jpg" },
-                    { name: "Arnor", img: "/images/patterns/pattern5.jpg" },
-                    { name: "Forlindon", img: "/images/patterns/pattern6.jpg" },
-                  ].map((region, i) => (
-                    <li key={i}>
-                      <div className="image">
-                        <a href="properties-detail.html">
-                          <img src={region.img} alt={region.name} style={{ width: "100%",  }} />
-                        </a>
-                      </div>
-                      <p>
-                        <a href="properties-detail.html">{region.name}</a>
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+const Footer = () => (
+  <footer id="footer">
+    <div id="footer-top" className="container">
+      <div className="row">
+        <div className="block col-sm-3">
+          <a href="#"><img src="images/logo.png" alt="One Ring Rentals" /></a>
+          <br /><br />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo eros nibh, et dictum elit tincidunt eget. Pellentesque volutpat quam dignissim, convallis elit id, efficitur sem. Vivamus ac scelerisque sem. Aliquam sed enim rutrum nibh gravida pellentesque nec at metus.
+          </p>
+        </div>
+        <div className="block col-sm-3">
+          <h3>Helpful Links</h3>
+          <ul className="footer-links">
+            <li><a href="#">All rentals</a></li>
+            <li><a href="#">List your rental</a></li>
+            <li><a href="#">Read our FAQs</a></li>
+          </ul>
+        </div>
+        <div className="block col-sm-6">
+          <h3>Popular regions</h3>
+          <FooterPopularRegions />
+          {/* I changed from inline region cards to a separate component named FooterPopularRegions.
+              This change basically splits the list into two columns to match the original 
+              stattic HTML layout for the footer and it make the component reusable  */}
         </div>
       </div>
-
-          
-
-      {/* Copyright */}
-      <div id="copyright">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12">
-              &copy; 2014 One Ring Rentals
-
-              {/* Social Networks */}
-              <ul className="social-networks">
-                {["facebook", "twitter", "google", "pinterest", "youtube", "rss"].map((network, i) => (
-                  <li key={i}>
-                    <a href="#"><i className={`fa fa-${network}`}></i></a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
+    </div>
+  </footer>
+);
 
 export default Footer;
