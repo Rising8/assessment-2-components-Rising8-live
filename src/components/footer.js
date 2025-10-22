@@ -29,7 +29,28 @@ const Footer = () => (
         </div>
       </div>
     </div>
+
+    {/* Copyright section - some reason i didn't add this in when i committed the footer change*/}
+    <div id="copyright">
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-12">
+            &copy; 2014 One Ring Rentals
+            <ul className="social-networks">
+              {["facebook", "twitter", "google", "pinterest", "youtube", "rss"].map((network, i) => (
+                <li key={i}>
+                  <a href="#"><i className={`fa fa-${network}`}></i></a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 );
 
 export default Footer;
+
+
+
