@@ -83,12 +83,12 @@ const Header = ({ setPage }) => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={(e) => e.preventDefault() && setPage("list")}>
+                    <a href="#" onClick={(e) => { e.preventDefault(); setPage("list"); }}>
                       List your rental
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={(e) => e.preventDefault() && setPage("guides")}>
+                    <a href="#" onClick={(e) => { e.preventDefault() && setPage("guides"); }}>
                       Travel Guides
                     </a>
                   </li>
