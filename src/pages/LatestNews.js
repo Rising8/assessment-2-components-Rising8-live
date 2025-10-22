@@ -10,6 +10,7 @@ const newsItems = [
     date: "2024-08-08",
     link: "#",
     icon: "fa-file-text",
+    img: "/images/patterns/pattern1.jpg",
   },
   {
     title: "Top 10 Rental Properties in Sydney",
@@ -18,6 +19,7 @@ const newsItems = [
     date: "2024-08-07",
     link: "#",
     icon: "fa-file-text",
+    img: "/images/patterns/pattern2.jpg",
   },
   {
     title: "Customer Stories: Finding the Perfect Home",
@@ -26,6 +28,7 @@ const newsItems = [
     date: "2024-08-06",
     link: "#",
     icon: "fa-file-text",
+    img: "/images/patterns/pattern3.jpg",
   },
 ];
 
@@ -38,7 +41,16 @@ const NewsCard = ({ news }) => (
           <i className="fa fa-file-o"></i> Read More
         </span>
       </a>
-      <img src="/images/patterns/pattern1.jpg" alt={news.title} /> {/* remove the image */}
+      <img
+        src={news.img}
+        alt={news.name}
+        style={{
+          width: "100%",
+          height: "200px", // fixed height (all images)
+          objectFit: "cover", 
+          display: "block",
+        }}
+      />
     </div>
     <div className="tag">
       <i className={`fa ${news.icon}`}></i>
